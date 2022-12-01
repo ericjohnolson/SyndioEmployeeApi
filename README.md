@@ -9,7 +9,7 @@ This Syndio Backend App is an API exposing employee diversity and equity indicat
    ```bash
    python -m venv ./venv
    ```
-2. Using a terminal, install the project requirements from the base directory, `employeeApi`
+2. Install the project requirements from the base directory, `employeeApi`
    ```bash
    pip install -r requirements.txt
    ```
