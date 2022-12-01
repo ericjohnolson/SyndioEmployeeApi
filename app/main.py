@@ -18,13 +18,7 @@ def api_health_check():
     return {"Message": "API is running."}
 
 
-@app.get("/testdb/")
-def test_db(db: Session = Depends(get_db)):
-    db.connection()
-    return {"Message": engine.table_names()}
-
-
-@app.get("/employees/", response_model=list[schema.Employee])
+@app.get("/employees", response_model=list[schema.Employee])
 def get_employees(db: Session = Depends(get_db)):
     employees = repository.get_employees(db)
     return employees
